@@ -15,7 +15,7 @@ class ProfileItem extends Component {
                 <p>
                 {profile.status}{' '}
                 {isEmpty(profile.company) ? null : (
-                <span>at {profile.company}</span>
+                <span> {profile.company}</span>
                  )}
                </p>
                <p>
@@ -24,11 +24,10 @@ class ProfileItem extends Component {
                 )}
                </p>
                <Link to={`/userprofile/${profile.profilename}`} className="btn btn-info">
-       Voir le Profile
-              </Link>
+               Voir le profil              </Link>
            </div>
             <div className="col-md-4 d-none d-md-block">
-              <h4>Ensemble de compétences</h4>
+              <h4>Mes compétences</h4>
               <ul className="list-group">
                  {profile.skills.slice(0, 4).map((skill, index) => (
                    <li key={index} className="list-group-item">

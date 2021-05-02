@@ -14,6 +14,7 @@ class Navbar extends Component {
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
+    //adding logout option (navbar for loggedin user)
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
@@ -33,11 +34,12 @@ class Navbar extends Component {
         </li>
       </ul>
     );
+    //for users who have'nt registered
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item" >
           <Link className="nav-link" to="/register" >
-            s'inscrit
+            S'inscrit 
           </Link>
         </li>
         <li className="nav-item">
@@ -71,7 +73,7 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/offres">
+                <Link className="nav-link" to="/offers">
                   {" "}
                   Offres
                 </Link>

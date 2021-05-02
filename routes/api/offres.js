@@ -80,55 +80,15 @@ router.get("/users/:users_id", (req, res) => {
 });
 router.post(
     "/",
-    passport.authenticate("jwt", {
-        session: false
-    }),
+   
     (req, res) => {
-        const { errors, isValid } = validateOffreInput(req.body);
-
-        if (!isValid) {
-            return res.status(400).json(errors);
-        }
+      
         const fields = {};
-        fields.user = req.user.id;
-
-        if (req.body.jobTitle) fields.jobTitle = req.body.jobTitle;
-        if (req.body.company) fields.company = req.body.company;
-        if (req.body.location) fields.location = req.body.location;
-
-        if (typeof req.body.skills !== "undefined")
-            fields.skills = req.body.skills.split(",");
+        console.log(req.body)
+        new offres(req.body).save()
+        res.json(offres)
 
 
-        offres.findOne({
-            user: req.user.id
-        }).then(offre => {
-            if (offre) {
-                offre.findOneAndUpdate(
-                    {
-                        user: req.user.id
-                    },
-                    {
-                        $set: fields
-                    },
-                    {
-                        new: true
-                    }
-                ).then(offre => res.json(offre));
-            } else {
-                offres.findOne({
-                    jobTitle: fields.jobTitle
-                }).then(offre => {
-                    if (offre) {
-                        errors.jobTitle = "jobTitlealready there";
-                        res.status(400).json(errors);
-                    }
-                    new offres(fields)
-                        .save()
-                        .then(offre => res.json(offre));
-                });
-            }
-        });
     }
 );
 

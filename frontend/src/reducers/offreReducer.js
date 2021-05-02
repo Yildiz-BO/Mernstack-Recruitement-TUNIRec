@@ -4,7 +4,6 @@ import {
     GET_OFFRES,
     CLEAR_CURRENT_OFFER
 } from "../actions/types";
-import { stat } from "fs";
 const initialstate = {
     offre: null,
     offres: null,
@@ -21,7 +20,7 @@ export default function(state = initialstate, action) {
         case GET_OFFRE:
             return {
                 ...state,
-                profile: action.payload,
+                offre: action.payload,
                 loading: false
             };
         case GET_OFFRES:

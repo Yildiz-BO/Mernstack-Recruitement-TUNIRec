@@ -19,13 +19,15 @@ class dashboard extends Component {
     if(profile==null ||loading){
     content=(
       <div>
-    <h>LOADING ............</h>
+    <h>CHARGEMENT de votre profil ............</h>
    
     </div>
     )
     }
     
     else{
+      //to check if new logged in user has data in profile
+      //if has then redirect to profile with components else create new profile
       if(Object.keys(profile).length>0){
         content=(
         <div>
@@ -40,12 +42,14 @@ class dashboard extends Component {
         
       }
       else{
+        //if loggged in user doesnt have profile
+        //adding new button to create new profile
         content=(
         <div>
-          <p className="lead text-muted">Bienvenu {user.name}</p>
-          <p> pour creé un profil cliquer sur le bouton ci-desous:</p>
+          <p className="lead text-muted">Welcome {user.name}</p>
+          <p> Pour créer votre profil cliquez sur le bouton ci-dessous</p>
           <Link to="/createprofile" className="btn btn-lg btn-info">
-          Nouveau profile</Link>
+          Créer un nouveau profil</Link>
         </div>
         )
       }
@@ -57,7 +61,7 @@ class dashboard extends Component {
       <div className="container">
       <div className="row">
       <div className="col-md-12">
-        <h1 className="display-4">{user.name} Profile</h1>
+        <h1 className="display-4">Mon profile</h1>
         {content}
       </div>
       </div>

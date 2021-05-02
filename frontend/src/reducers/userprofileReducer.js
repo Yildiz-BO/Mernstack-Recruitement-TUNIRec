@@ -6,6 +6,7 @@ import {
 } from "../actions/types";
 import { stat } from "fs";
 const initialstate = {
+    //will have profile
     profile: null,
     profiles: null,
     loading: false

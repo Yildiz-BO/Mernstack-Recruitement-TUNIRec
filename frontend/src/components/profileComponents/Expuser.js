@@ -12,7 +12,7 @@ class Expuser extends Component {
         Position: {exp.title}
         </p>
         <p>
-         Location: {exp.location}
+        Emplacement: {exp.location}
         </p>
         <p>
          Description: {exp.description}
@@ -31,8 +31,7 @@ class Expuser extends Component {
           {expItems.length > 0 ? (
             <ul className="list-group">{expItems}</ul>
           ) : (
-            <p className="text-center">Je suis nouveau sur le marché du travail!
-            </p>
+            <p className="text-center"></p>
           )}
           </p>
         </div>

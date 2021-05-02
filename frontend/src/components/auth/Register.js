@@ -14,7 +14,6 @@ class Register extends Component {
       email: '',
       password: '',
       password2: '',
-      role: '',
       errors: {}
     };
 
@@ -24,7 +23,7 @@ class Register extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/');
+      this.props.history.push('/dashboard');
     }
   }
 
@@ -45,8 +44,7 @@ class Register extends Component {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2,
-      role: this.state.role
+      password2: this.state.password2
     };
 
     this.props.registerUser(newUser, this.props.history);
@@ -69,27 +67,24 @@ class Register extends Component {
           <div className="col-md-12 text-center">
           
                <h1 className="display-4 text-center">Sign Up</h1>
-               <p className="lead text-center">Créez votre profil et commencez à vous faire remarquer par les employeurs!</p>
+               <p className="lead text-center">Create your Profile and start getting noticed by Employers!</p>
               
               <div className="form-group">
               <form onSubmit={this.onSubmit}>
               <TextField
-                placeholder="Votre Nom"
+                placeholder="What's your Name?"
                 name="name" type="name" value={this.state.name} onChange={this.onChange} error={errors.name}/>
-                  <TextField
-                placeholder="Role"
-                name="role" type="name" value={this.state.role} onChange={this.onChange} error={errors.role}/>
-                       
+                    
                 <TextField
-                placeholder="Votre Email"
+                placeholder="What's your Email?"
                 name="email" type="email" value={this.state.email} onChange={this.onChange} error={errors.email}/>
                 
                 <TextField
-                placeholder="Mot De Passe"
+                placeholder="Password"
                 name="password" type="password" value={this.state.password} onChange={this.onChange} error={errors.password}/>
                  
                  <TextField
-                placeholder="Confirmer Votre Mot de passe"
+                placeholder="Please confirm your Password"
                 name="password2" type="password" value={this.state.password2} onChange={this.onChange} error={errors.password2}/>
 
                     <hr />

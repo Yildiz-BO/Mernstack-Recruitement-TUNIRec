@@ -23,7 +23,7 @@ render() {
     let profileContent;
 
     if (profile === null || loading) {
-      profileContent = <h3>loading....</h3>;
+      profileContent = <h3>Chargement en cours....</h3>;
     } else {
       profileContent = (
         <div>

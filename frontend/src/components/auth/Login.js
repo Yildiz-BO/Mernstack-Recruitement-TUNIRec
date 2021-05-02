@@ -20,13 +20,14 @@ class Login extends Component {
 
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
-            this.props.history.push("/");
+            //redirect to dashboard after successful login
+            this.props.history.push("/dashboard");
         }
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.auth.isAuthenticated) {
-            this.props.history.push("/");
+            this.props.history.push("/dashboard");
         }
 
         if (nextProps.errors) {
@@ -36,6 +37,7 @@ class Login extends Component {
 
     onSubmit(e) {
         e.preventDefault();
+        //storing input into userData onsubmit event
         const userData = {
             email: this.state.email,
             password: this.state.password
@@ -57,7 +59,7 @@ class Login extends Component {
                         <div className="row">
                             <div className="col-md-12 text-center">
                                 <p className="lead text-center">
-                                    
+                                    Already an User? Signin to your account
                                 </p>
                                 <h1 className="display-4 text-center">
                                     Log In
@@ -68,7 +70,7 @@ class Login extends Component {
                                         <div className="form-group">
                                             <input
                                                 type="email"
-                                                placeholder="Taper votre Email"
+                                                placeholder="Enter your Email"
                                                 className={classnames(
                                                     "form-control form-control",
                                                     {
@@ -89,7 +91,7 @@ class Login extends Component {
                                         <div className="form-group">
                                             <input
                                                 type="password"
-                                                placeholder="votre Mot de passe"
+                                                placeholder="Enter your Password"
                                                 className={classnames(
                                                     "form-control form-control",
                                                     {
@@ -117,12 +119,13 @@ class Login extends Component {
                                         className="alert alert-success"
                                         role="alert"
                                     >
-Vous n'avez pas de compte? Inscrivez-vous ci-dessous!                                    </div>
+                                        Don't have an Account? Register Below!
+                                    </div>
                                     <Link
                                         to="register"
                                         className="btn btn-lg btn-success"
                                     >
-                                        S'inscrire
+                                        Register
                                     </Link>
                                 </div>
                             </div>

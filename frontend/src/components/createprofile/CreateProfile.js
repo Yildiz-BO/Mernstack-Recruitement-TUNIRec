@@ -54,37 +54,37 @@ class CreateProfile extends Component {
       <div className='container'>
       <div className="row">
       <div className="col-md-8 m-auto">
-        <h1 className="display-4 text-center">Creer votre profil </h1>
+        <h1 className="display-4 text-center">Créer votre profile</h1>
         <form onSubmit={this.onSubmit}>
         <TextField
-        placeholder="nom de profile"
+        placeholder="Nom"
         name="profilename"
         value={this.state.profilename}
         onChange={this.onChange}
         error={errors.profilename}
-        info="Entrer vorte nom de profil "/>
+        info="Entrez le nom du profil que vous souhaitez conserver"/>
         <TextField
-        placeholder="Location"
+        placeholder="emplacement"
         name="location"
         value={this.state.location}
         onChange={this.onChange}
         error={errors.location}
-        info="exp (tunis , sokra .."/>
+        info="Ville "/>
         <TextField
-        placeholder="compétence"
+        placeholder="Compétences"
         name="skills"
         value={this.state.skills}
         onChange={this.onChange}
         error={errors.skills}
-        info="vos compétences(exp. HTML,Management, Marketing, Customer Service)"/>
+        info="Entrez les compétences séparées par des virgules (par exemple, HTML, gestion, marketing, service client)"/>
     
         <TextField
-        placeholder="centre d'interêt"
+        placeholder="Intérêts"
         name="interest"
         value={this.state.interest}
         onChange={this.onChange}
         error={errors.interest}
-        info="(exp. Blogging, Football, dev)"/>
+        info="Quels sont vos intérêts? (par exemple, blogs, football, cuisine)"/>
          <TextAreaField
         placeholder="Bio"
         name="bio"
@@ -94,7 +94,7 @@ class CreateProfile extends Component {
         info="Présentez-vous brièvement"/>
         <input
                   type="submit"
-                  value="Créer mon PROFIL"
+                  value="Créer !"
                   className="btn btn-info btn-block mt-4"
                 />
         </form>

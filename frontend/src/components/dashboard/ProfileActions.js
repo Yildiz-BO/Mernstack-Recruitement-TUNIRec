@@ -6,10 +6,10 @@ const ProfileActions= () => {
     <div className="btn-group mb-4" role="group">
     
                     <Link to="/editprofile" class="btn btn-info">
-                       Modifier votre profile</Link>
+                       Modifier </Link>
                     <Link to="/addexp" class="btn btn-info">
                       
-                      Ajouter une experience</Link>
+                      Ajouter des Experience</Link>
                   
     </div>
   )

@@ -12,24 +12,24 @@ import Home from './components/layout/Home';
 import Footer from './components/layout/Footer';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-//profiles
 import dashboard from './components/dashboard/dashboard';
 import CreateProfile from './components/createprofile/CreateProfile';
 import editprofle from './components/editProfile/editprofile';
 import addExperience from './components/addExperience/addExperience';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profileComponents/Profile';
-//offres
-import Offre from './components/offreComponents/Offre';
-import Info from './components/offreComponents/Info';
-
-import offreDashboard from './components/offreDashboard/offreDashboard';
-import createoffre from './components/createoffre/createoffre';
-import editOffre from './components/editOffre/editOffre';
-
+import Offer from './components/Offre/Offre';
 
 import store from './store';
 
+//checking for tokens
+//if(localStorage.jwtToken){
+//  //set auth token to header auth
+//  setAuthToken(localStorage.jwtToken);
+//  const decoded =jwt_decode(localStorage.jwtToken);
+//  //set user and isauthenticated
+//  store.dispatch(setCurrentUser(decoded))
+//}
 
 
 class App extends Component {
@@ -48,16 +48,10 @@ class App extends Component {
         <Route exact path="/editprofile" component={editprofle}/>
         <Route exact path="/addexp" component={addExperience}/>
         <Route exact path="/userprofile" component={Profiles}/>
+        <Route exact path="/offers" component={Offer}/>
+
         <Route exact path="/userprofile/:profilename" component={Profile}/>
         
-        <Route exact path="/offreDashboard" component={offreDashboard}/>
-        <Route exact path="/createoffre" component={createoffre}/>
-        <Route exact path="/editOffre" component={editOffre}/>
-        <Route exact path="/offreComponents" component={Offre}/>
-        <Route exact path="/offreComponents" component={Info}/>
-
-        <Route exact path="/offres/:jobTiltle" component={Offre}/>
-
         </div>
         <Footer/>
       </div>

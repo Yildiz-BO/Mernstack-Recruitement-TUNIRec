@@ -11,11 +11,10 @@ class OffreItem extends Component {
             <div className="row">
             
             <div className="col-lg-6 col-md-4 col-8">
-                <h3> {profile.user && profile.user.name}</h3>
                 <p>
-                {offre.status}{' '}
+               
                 {isEmpty(offre.company) ? null : (
-                <span>at {offre.company}</span>
+                <span>{offre.company}</span>
                  )}
                </p>
                <p>
@@ -24,21 +23,17 @@ class OffreItem extends Component {
                 )}
                </p>
                <Link to={`/offres/${offre.jobTitle}`} className="btn btn-info">
-       Voir Offre
+       Postuler
               </Link>
            </div>
             <div className="col-md-4 d-none d-md-block">
-              <h4>Skill Set</h4>
-              <ul className="list-group">
-                 {offre.skills.slice(0, 4).map((skill, index) => (
-                   <li key={index} className="list-group-item">
-                    <i className="fa fa-check pr-1" />
-                       {skill}
-                   </li>
-                 ))}
-              </ul>
+              <h4>Compétences demandée</h4>
+              <p>
+               {isEmpty(offre.skills) ? null : (
+                  <span>{offre.skills}</span>
+                )}
+               </p>
                </div>
-                  
              </div>
          </div>
         );

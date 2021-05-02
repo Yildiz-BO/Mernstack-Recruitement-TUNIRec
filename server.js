@@ -11,6 +11,7 @@ const app=express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const db = require('./config/keys').mongoURI;
+const expressListRoutes = require('express-list-routes');
 
 mongoose
   .connect(db,{
@@ -48,4 +49,6 @@ app.use('/api/newsletter', newsletterRoute);
 const port=process.env.PORT || 5000;
 
 app.listen(port,()=> console.log('server running on ${port}'));
+expressListRoutes(app);
+
 

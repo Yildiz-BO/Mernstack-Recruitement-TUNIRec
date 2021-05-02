@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+//creating a seperate component for all the textfields
 const TextField= ({
     name,
     placeholder,

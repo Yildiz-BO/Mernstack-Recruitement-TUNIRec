@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
+//import {withRouter} from 'react-router-dom';
 import { deleteExperience } from '../../actions/userprofileAction';
 
 class Experience extends Component {
+ //to delete a field of exp
     onDeleteClick(id) {
     this.props.deleteExperience(id);
   }
@@ -37,7 +39,7 @@ class Experience extends Component {
           <thead>
             <tr className="bg-primary">
               <th>Societé</th>
-              <th>Titre</th>
+              <th>Poste</th>
               <th>Durée</th>
               <th />
             </tr>

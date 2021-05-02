@@ -20,12 +20,10 @@ class Info extends Component {
       <div className="row">
         <div className="col-md-12">
           <div className="card card-body bg-light mb-3">
-            <h3 className="text-center text-info">Résumé
-</h3>
+            <h3 className="text-center text-info">Summary</h3>
             <p className="lead">
               {isEmpty(profile.bio) ? (
-                <span>Je recherche un emploi qui m'aidera à utiliser mes compétences et les developpé
-                </span>
+                <span>Je recherche un emploi qui m'aidera à utiliser et devloppée mes compétences</span>
               ) : (
                 <span>{fname.bio}</span>
               )}

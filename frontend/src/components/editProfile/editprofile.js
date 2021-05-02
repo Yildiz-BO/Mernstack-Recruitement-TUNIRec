@@ -63,44 +63,44 @@ class CreateProfile extends Component {
         <h1 className="display-4 text-center">Edit Your Profile</h1>
         <form onSubmit={this.onSubmit}>
         <TextField
-        placeholder="nom de profile"
+        placeholder="Profile name"
         name="profilename"
         value={this.state.profilename}
         onChange={this.onChange}
         error={errors.profilename}
-        info="Entrer vorte nom de profil"/>
+        info="Enter the Profilename you want to keep"/>
         <TextField
         placeholder="Location"
         name="location"
         value={this.state.location}
         onChange={this.onChange}
         error={errors.location}
-        info="exp (tunis , sokra .."/>
+        info="City (eg. Hamilton)"/>
         <TextField
-        placeholder="compétence"
+        placeholder="Skills"
         name="skills"
         value={this.state.skills}
         onChange={this.onChange}
         error={errors.skills}
-        info="vos compétences(exp. HTML,Management, Marketing, Customer Service)"/>
+        info="Enter the skills seperated by Commas (eg. HTML,Management, Marketing, Customer Service)"/>
     
         <TextField
-        placeholder="centre d'interêt"
+        placeholder="Interests"
         name="interest"
         value={this.state.interest}
         onChange={this.onChange}
         error={errors.interest}
-        info="(exp. Blogging, Football, Cooking)"/>
+        info="What are your interests? (eg. Blogging, Football, Cooking)"/>
          <TextAreaField
         placeholder="Bio"
         name="bio"
         value={this.state.bio}
         onChange={this.onChange}
         error={errors.bio}
-        info="Présentez-vous brièvement"/>
+        info="Introduce yourself briefly"/>
         <input
                   type="submit"
-                  value="Modifier mon PROFIL"
+                  value="Create my PROFILE"
                   className="btn btn-info btn-block mt-4"
                 />
         </form>
