@@ -31,7 +31,7 @@ class offreDashboard extends Component {
         <div>
          
         <OffreAction/>
-        <div style={{marginBottom:'60px'}}/>
+        
         </div>
         )
         
