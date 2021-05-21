@@ -53,7 +53,6 @@ export const offreLoading = () => {
 
 export const getOffres = () => dispatch => {
     dispatch(offreLoading());
-    console.log("rana lena yhdik")
     axios
         .get("/api/offres/all")
         .then(res =>

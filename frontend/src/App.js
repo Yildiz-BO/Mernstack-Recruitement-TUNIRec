@@ -13,6 +13,9 @@ import Footer from './components/layout/Footer';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import dashboard from './components/dashboard/dashboard';
+import offreDashboard from './components/offreDashboard/offreDashboard';
+import createoffre from './components/createoffre/createoffre';
+
 import CreateProfile from './components/createprofile/CreateProfile';
 import editprofle from './components/editProfile/editprofile';
 import addExperience from './components/addExperience/addExperience';
@@ -45,11 +48,13 @@ class App extends Component {
         <Route exact path="/login" component={Login}/>
         <Route exact path="/dashboard" component={dashboard}/>
         <Route exact path="/createprofile" component={CreateProfile}/>
+        <Route exact path="/createoffre" component={createoffre}/>
+
         <Route exact path="/editprofile" component={editprofle}/>
         <Route exact path="/addexp" component={addExperience}/>
         <Route exact path="/userprofile" component={Profiles}/>
         <Route exact path="/offers" component={Offer}/>
-
+        <Route exact path="/offreDashboard" component={offreDashboard}/>
         <Route exact path="/userprofile/:profilename" component={Profile}/>
         
         </div>
