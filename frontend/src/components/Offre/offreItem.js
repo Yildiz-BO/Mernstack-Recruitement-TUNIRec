@@ -22,9 +22,9 @@ class OffreItem extends Component {
                   <span>{offre.location}</span>
                 )}
                </p>
-               <Link to={`/offres/${offre.jobTitle}`} className="btn btn-info">
-       Postuler
+               <Link to={`/offres/${offre.jobTitle}`} className="btn btn-info">  Postuler
               </Link>
+              
            </div>
             <div className="col-md-4 d-none d-md-block">
               <h4>Compétences demandée</h4>
