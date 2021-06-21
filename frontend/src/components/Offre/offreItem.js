@@ -11,6 +11,12 @@ class OffreItem extends Component {
             <div className="row">
             
             <div className="col-lg-6 col-md-4 col-8">
+                
+            <h4>
+               {isEmpty(offre.jobTitle) ? null : (
+                  <span>{offre.jobTitle}</span>
+                )}
+               </h4>
                 <p>
                
                 {isEmpty(offre.company) ? null : (
@@ -22,7 +28,13 @@ class OffreItem extends Component {
                   <span>{offre.location}</span>
                 )}
                </p>
-               <Link to={`/offres/${offre.jobTitle}`} className="btn btn-info">  Postuler
+               <p>
+               {isEmpty(offre.Yexperience) ? null : (
+                  <span>{offre.Yexperience}</span>
+                )} ans d'experience
+               </p>
+             
+               <Link to={`/subscribe`} className="btn btn-info">  Postuler
               </Link>
               
            </div>

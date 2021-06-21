@@ -20,10 +20,12 @@ import CreateProfile from './components/createprofile/CreateProfile';
 import editprofle from './components/editProfile/editprofile';
 import addExperience from './components/addExperience/addExperience';
 import Profiles from './components/profiles/Profiles';
+
 import Profile from './components/profileComponents/Profile';
 import Offer from './components/Offre/Offre';
 
 import store from './store';
+import subscribe from './components/subscribe/subscribe';
 
 //checking for tokens
 //if(localStorage.jwtToken){
@@ -49,6 +51,7 @@ class App extends Component {
         <Route exact path="/dashboard" component={dashboard}/>
         <Route exact path="/createprofile" component={CreateProfile}/>
         <Route exact path="/createoffre" component={createoffre}/>
+        <Route exact path="/subscribe" component={subscribe}/>
 
         <Route exact path="/editprofile" component={editprofle}/>
         <Route exact path="/addexp" component={addExperience}/>

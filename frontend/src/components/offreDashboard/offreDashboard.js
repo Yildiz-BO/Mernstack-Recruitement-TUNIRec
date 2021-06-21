@@ -43,6 +43,10 @@ class offreDashboard extends Component {
           <p> To add new offer click the button below:</p>
           <Link to="/createoffre" className="btn btn-lg btn-info">
           Create new offres</Link>
+          <br></br>          <br></br>
+
+          <Link to="/" className="btn btn-lg btn-info">
+          voir les postule </Link>
         </div>
         )
       }

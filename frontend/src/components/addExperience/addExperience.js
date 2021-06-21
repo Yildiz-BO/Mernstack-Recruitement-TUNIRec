@@ -97,11 +97,11 @@ class addExperience extends Component {
         error={errors.to}
         info="End date"/>
          <TextAreaFieldGroup
-        placeholder="Bio"
-        name="bio"
-        value={this.state.bio}
+        placeholder="Contact"
+        name="contact"
+        value={this.state.contact}
         onChange={this.onChange}
-        error={errors.bio}
+        error={errors.contact}
         info="What did you do there?"/>
         <input
                   type="submit"

@@ -7,6 +7,7 @@ const users=require('./routes/api/users');
 const userprofile=require('./routes/api/userprofile');
 const offres =require ('./routes/api/offres');
 const newsletterRoute = require('./routes/api/newsletter');
+//const postuleRoute = require('./routes/api/postule');
 const app=express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -37,6 +38,7 @@ app.use('/api/users',users);
 app.use('/api/userprofile',userprofile);
 app.use('/api/offres',offres );
 app.use('/api/newsletter', newsletterRoute);
+//app.use('/api/postule', postuleRoute);
 
 
 

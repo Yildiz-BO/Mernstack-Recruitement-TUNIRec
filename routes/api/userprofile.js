@@ -100,6 +100,7 @@ router.post(
         if (req.body.profilename) fields.profilename = req.body.profilename;
         if (req.body.company) fields.company = req.body.company;
         if (req.body.location) fields.location = req.body.location;
+        if (req.body.contact) fields.contact = req.body.contact;
 
         if (typeof req.body.skills !== "undefined")
             fields.skills = req.body.skills.split(",");

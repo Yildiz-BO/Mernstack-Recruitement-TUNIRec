@@ -27,7 +27,7 @@ const Profileschema=new Schema({
         type: [String],
         
     },
-    bio:{
+    contact:{
         type:String,
         
     },

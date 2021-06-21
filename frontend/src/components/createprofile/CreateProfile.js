@@ -18,7 +18,7 @@ class CreateProfile extends Component {
             location:'',
             skills:'',
             interest:'',
-            bio:'',
+            contact:'',
             errors:{}
             
         }
@@ -39,7 +39,7 @@ class CreateProfile extends Component {
             location:this.state.location,
             skills:this.state.skills,
             interest:this.state.interest,
-            bio:this.state.bio
+            contact:this.state.contact
         }
        
         this.props.createProfile(profileData, this.props.history);
@@ -86,12 +86,12 @@ class CreateProfile extends Component {
         error={errors.interest}
         info="Quels sont vos intérêts? (par exemple, blogs, football, cuisine)"/>
          <TextAreaField
-        placeholder="Bio"
-        name="bio"
-        value={this.state.bio}
+        placeholder="contact"
+        name="contact"
+        value={this.state.contact}
         onChange={this.onChange}
-        error={errors.bio}
-        info="Présentez-vous brièvement"/>
+        error={errors.contact}
+        info="votre numero ou bien email"/>
         <input
                   type="submit"
                   value="Créer !"

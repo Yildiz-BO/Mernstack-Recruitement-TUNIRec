@@ -23,6 +23,11 @@ class ProfileItem extends Component {
                   <span>{profile.location}</span>
                 )}
                </p>
+             
+              <p>
+               {isEmpty(profile.contact) ? null : (
+                  <span>{profile.contact}</span>
+                )}</p>
                <Link to={`/userprofile/${profile.profilename}`} className="btn btn-info">
                Voir le profil              </Link>
            </div>
