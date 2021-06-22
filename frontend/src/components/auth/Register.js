@@ -66,25 +66,25 @@ class Register extends Component {
         <div className="row">
           <div className="col-md-12 text-center">
           
-               <h1 className="display-4 text-center">Sign Up</h1>
-               <p className="lead text-center">Create your Profile and start getting noticed by Employers!</p>
+               <h1 className="display-4 text-center">S'inscrire</h1>
+               <p className="lead text-center">Créez votre profil et commencez à vous faire remarquer par les employeurs !</p>
               
               <div className="form-group">
               <form onSubmit={this.onSubmit}>
               <TextField
-                placeholder="What's your Name?"
+                placeholder="Votre Nom?"
                 name="name" type="name" value={this.state.name} onChange={this.onChange} error={errors.name}/>
                     
                 <TextField
-                placeholder="What's your Email?"
+                placeholder="Votre Email?"
                 name="email" type="email" value={this.state.email} onChange={this.onChange} error={errors.email}/>
                 
                 <TextField
-                placeholder="Password"
+                placeholder="Mot de passe"
                 name="password" type="password" value={this.state.password} onChange={this.onChange} error={errors.password}/>
                  
                  <TextField
-                placeholder="Please confirm your Password"
+                placeholder="Confirmer votre mot de passe"
                 name="password2" type="password" value={this.state.password2} onChange={this.onChange} error={errors.password2}/>
 
                     <hr />

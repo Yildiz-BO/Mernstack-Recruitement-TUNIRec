@@ -19,7 +19,7 @@ class offreDashboard extends Component {
     if(offre==null ||loading){
     content=(
       <div>
-    <h>LOADING ............</h>
+    <h>Chargement ............</h>
    
     </div>
     )
@@ -39,13 +39,13 @@ class offreDashboard extends Component {
       else{
         content=(
         <div>
-          <p className="lead text-muted">Welcome {user.name}</p>
-          <p> To add new offer click the button below:</p>
+          <h1>Bienvenue {user.name}</h1>
+          <p> Pour ajouter une nouvelle offre, cliquez sur le bouton ci-dessous :</p>
           <Link to="/createoffre" className="btn btn-lg btn-info">
-          Create new offres</Link>
+          Créer une offre</Link>
           <br></br>          <br></br>
 
-          <Link to="/" className="btn btn-lg btn-info">
+          <Link to="/offers" className="btn btn-lg btn-info">
           voir les postule </Link>
         </div>
         )
@@ -58,7 +58,6 @@ class offreDashboard extends Component {
       <div className="container">
       <div className="row">
       <div className="col-md-12">
-        <h1 className="display-4">offreDashboard for company</h1>
         {content}
       </div>
       </div>

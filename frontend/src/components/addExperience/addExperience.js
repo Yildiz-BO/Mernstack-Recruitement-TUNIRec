@@ -55,57 +55,57 @@ class addExperience extends Component {
       <div className='container'>
       <div className="row">
       <div className="col-md-8 m-auto">
-      <Link to="/dashboard" className="btn btn-light"> Back</Link>
-        <h1 className="display-4 text-center">Add your experience</h1>
+      <Link to="/dashboard" className="btn btn-light"> Retour</Link>
+        <h1 className="display-4 text-center">Ajoutez votre expérience</h1>
         <form onSubmit={this.onSubmit}>
         <TextField
-        placeholder="Job Title"
+        placeholder="Poste"
         name="title"
         value={this.state.title}
         onChange={this.onChange}
         error={errors.title}
         info="Job title"/>
         <TextField
-        placeholder="Company Name"
+        placeholder="Société"
         name="company"
         value={this.state.company}
         onChange={this.onChange}
         error={errors.company}
-        info="Enter the company name"/>
+        info="Entrer le nom de société "/>
         <TextField
         placeholder="Location"
         name="location"
         value={this.state.location}
         onChange={this.onChange}
         error={errors.location}
-        info="City (eg. Hamilton)"/>
+        info="Ville (Sfax,Sousse...)"/>
         <TextField
-        placeholder="Starting date"
+        placeholder="Date de debut"
         name="from"
         type="date"
         value={this.state.from}
         onChange={this.onChange}
         error={errors.from}
-        info="Start date"/>
+        info="Date de debut"/>
     
         <TextField
-        placeholder="to"
+        placeholder="à"
         name="to"
         type="date"
         value={this.state.to}
         onChange={this.onChange}
         error={errors.to}
-        info="End date"/>
+        info="Date de fin"/>
          <TextAreaFieldGroup
-        placeholder="Contact"
+        placeholder="description"
         name="contact"
         value={this.state.contact}
         onChange={this.onChange}
         error={errors.contact}
-        info="What did you do there?"/>
+        info="Qu'est-ce que tu faisais là?"/>
         <input
                   type="submit"
-                  value="Submit"
+                  value="Ajouter"
                   className="btn btn-info btn-block mt-4"
                 />
         </form>

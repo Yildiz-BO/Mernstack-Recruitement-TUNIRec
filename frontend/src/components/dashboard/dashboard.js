@@ -46,7 +46,7 @@ class dashboard extends Component {
         //adding new button to create new profile
         content=(
         <div>
-          <p className="lead text-muted">Welcome {user.name}</p>
+          <p className="lead text-muted">Bienvenue {user.name}</p>
           <p> Pour créer votre profil cliquez sur le bouton ci-dessous</p>
           <Link to="/createprofile" className="btn btn-lg btn-info">
           Créer un nouveau profil</Link>

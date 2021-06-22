@@ -55,10 +55,10 @@ class createoffre extends Component {
       <div className='container'>
       <div className="row">
       <div className="col-md-8 m-auto">
-        <h1 className="display-4 text-center">Create Your Profile</h1>
+        <h1 className="display-4 text-center">Nouvelle Offre</h1>
         <form onSubmit={this.onSubmit}>
         <TextField
-        placeholder="nom de profil demandé "
+        placeholder="Nom de profil demandé "
         name="jobTitle"
         value={this.state.jobTitle}
         onChange={this.onChange}
@@ -72,7 +72,7 @@ class createoffre extends Component {
         error={errors.location}
         info="sousse, tunis,sokra..."/>
         <TextField
-        placeholder="Competances"
+        placeholder="Compétences"
         name="skills"
         value={this.state.skills}
         onChange={this.onChange}
@@ -93,7 +93,7 @@ class createoffre extends Component {
         error={errors.company}/>
         <input
                   type="submit"
-                  value="Ajouter un offre"
+                  value="Ajouter une offre"
                   className="btn btn-info btn-block mt-4"
                 />
         </form>
